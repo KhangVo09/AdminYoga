@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">YogaAdmin</string>
+    <string-array name="days_of_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string-array name="time_slots">
+        <item>9:00 AM</item>
+        <item>12:00 PM</item>
+        <item>3:00 PM</item>
+        <item>6:00 PM</item>
+    </string-array>
+    <string-array name="yoga_types">
+        <item>Hatha</item>
+        <item>Vinyasa</item>
+        <item>Yin</item>
+        <item>Ashtanga</item>
+    </string-array>
+    <string-array name="search_types">
+        <item>Date</item>
+        <item>Teacher</item>
+        <item>Comments</item>
+    </string-array>
+</resources>
