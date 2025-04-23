@@ -42,10 +42,16 @@ public class MainActivity extends AppCompatActivity {
                 new YogaCourseAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(YogaCourse course) {
-                        Log.d("MainActivity", "Course clicked: ID = " + course.getId());
-                        Intent intent = new Intent(MainActivity.this, EditYogaCourseActivity.class);
-                        intent.putExtra("course_id", course.getId());
-                        startActivity(intent);
+                        try {
+                            int courseId = Integer.parseInt(course.getId()); // Parse the String ID to int
+                            Log.d("MainActivity", "Course clicked: ID = " + courseId);
+                            Intent intent = new Intent(MainActivity.this, EditYogaCourseActivity.class);
+                            intent.putExtra("course_id", courseId); // Pass as int
+                            startActivity(intent);
+                        } catch (NumberFormatException e) {
+                            Log.e("MainActivity", "Invalid course ID format: " + course.getId(), e);
+                            Toast.makeText(MainActivity.this, "Error: Invalid course ID", Toast.LENGTH_SHORT).show();
+                        }
                     }
 
                     @Override
